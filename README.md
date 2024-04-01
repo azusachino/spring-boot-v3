@@ -1,9 +1,13 @@
 # spring-boot-v3
 
-trial and error
+learn kotlin with spring framework & gradle.
 
 ## Components
 
 - SpringBoot
 - Gradle
 - Kotlin
+
+## References
+
+- [kotlin by example](https://play.kotlinlang.org/byExample)

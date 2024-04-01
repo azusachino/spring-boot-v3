@@ -4,6 +4,7 @@ fun main() {
     operations()
     eventLoop()
     testWhen()
+    equal()
 }
 
 fun operations() {
@@ -13,6 +14,29 @@ fun operations() {
     a = 2
     val s2 = "${s1.replace("is", "was")}, but now is $a"
     println(s2)
+
+    for (i in 0 until 3) {
+        print(i)
+    }
+    println()
+
+    for (i in 2..8 step 2) {
+        print(i)
+    }
+    println()
+
+    for (i in 3 downTo 0) {
+        print(i)
+    }
+
+    for (c in 'a'..'d') {        // 1
+        print(c)
+    }
+    print(" ")
+
+    for (c in 'z' downTo 's' step 2) { // 2
+        print(c)
+    }
 }
 
 fun eventLoop() {
@@ -99,4 +123,23 @@ fun getStringLength(obj: Any): Int? {
 
     // `obj` is automatically cast to `String` in this branch
     return obj.length
+}
+
+fun whenAssign(obj: Any): Any {
+    val result = when (obj) {                   // 1
+        1 -> "one"                              // 2
+        "Hello" -> 1                            // 3
+        is Long -> false                        // 4
+        else -> 42                              // 5
+    }
+    return result
+}
+
+// Kotlin uses == for structural comparison and === for referential comparison.
+fun equal() {
+    val authors = setOf("Shakespeare", "Hemingway", "Twain")
+    val writers = setOf("Twain", "Shakespeare", "Hemingway")
+
+    println(authors == writers)
+    println(authors === writers)
 }

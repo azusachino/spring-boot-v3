@@ -27,3 +27,9 @@ replay_pid*
 .idea/
 build/
 gradle/
+
+# mvn
+target/
+
+# env
+.env

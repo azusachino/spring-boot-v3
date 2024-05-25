@@ -1,6 +1,2 @@
-spring:
-  application:
-    name: blue-archive
-
 server:
   port: 8081
